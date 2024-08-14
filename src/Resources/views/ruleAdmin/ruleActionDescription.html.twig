@@ -1,0 +1,11 @@
+{% extends '@SonataAdmin/CRUD/base_list_field.html.twig' %}
+
+{% block field %}
+    <div>
+        {% for action in object.actions %}
+            <div>
+                {{ action|presta_describe_component }}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

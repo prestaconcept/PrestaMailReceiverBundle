@@ -1,0 +1,15 @@
+{% extends '@SonataAdmin/CRUD/base_show_field.html.twig' %}
+
+{% trans_default_domain admin.translationDomain %}
+
+{% block field_value %}
+    {% for filename in value %}
+        <div class="row {% if loop.index is even %} bg-gray-light {% endif %}">
+            <div>
+                <a href="{{ admin.generateUrl('downloadAttachment', {'id': object.id, 'filename': filename}) }}">
+                    {{ filename }}
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends '@SonataAdmin/CRUD/base_show_field.html.twig' %}
+
+{% trans_default_domain admin.translationDomain %}
+
+{% block field_value %}
+    {% for headerKey, headerValue in value %}
+        <div class="row {% if loop.index is even %} bg-gray-light {% endif %}">
+            <div class="col-md-4">
+                {{ headerKey }}
+            </div>
+            <div class="col-md-8">
+                {{ headerValue|join('</br>')|raw }}
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,42 @@
+{# @var admin \Sonata\AdminBundle\Admin\AdminInterface #}
+{# @var result \Presta\MailReceiverBundle\Entity\ExecutionActionResult #}
+
+<td colspan="2">
+    {% spaceless %}
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>{{ 'execution.show.label.results.action'|trans({}, 'PrestaMailReceiverBundle') }}</th>
+                <th>{{ 'execution.show.label.results.result'|trans({}, 'PrestaMailReceiverBundle') }}</th>
+                <th>{{ 'execution.show.label.results.error'|trans({}, 'PrestaMailReceiverBundle') }}</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for result in value %}
+                <tr>
+                    <td>{{ presta_describe_action(result.actionType, result.actionSettings) }}</td>
+                    <td>
+                        {% set class = 'label-default' %}
+                        {% if result.result == constant('RESULT_SUCCESS', result) %}
+                            {% set class = 'label-success' %}
+                        {% elseif result.result == constant('RESULT_FAILED', result) %}
+                            {% set class = 'label-danger' %}
+                        {% elseif result.result == constant('RESULT_SKIPPED', result) %}
+                            {% set class = 'label-warning' %}
+                        {% endif %}
+                        <span class="label {{ class }}">{{ ('execution.result.'~result.result)|trans({}, admin.translationDomain) }}</span>
+                    </td>
+                    <td>
+                        {% if result.error is not empty %}
+                            <a href="{{ admin.generateObjectUrl('downloadResultError', object, {'resultId': result.id}) }}"
+                               class="btn btn-default">
+                                <i class="fa fa-download"></i>
+                            </a>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% endspaceless %}
+</td>

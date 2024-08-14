@@ -1,0 +1,123 @@
+
+services:
+  # default configuration for services in *this* file
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  presta_mail_receiver.admin.email:
+    class: Presta\MailReceiverBundle\Admin\EmailAdmin
+    arguments:
+      - ~
+      - Presta\MailReceiverBundle\Entity\Email
+      - Presta\MailReceiverBundle\Controller\EmailController
+    calls:
+      - [setTranslationDomain, ['PrestaMailReceiverBundle']]
+      - [setLabelTranslatorStrategy, ['@sonata.admin.label.strategy.underscore']]
+    tags:
+      - { name: sonata.admin, manager_type: orm,  label: 'email_received.name' }
+
+  presta_mail_receiver.admin.rule:
+    class: Presta\MailReceiverBundle\Admin\RuleAdmin
+    arguments:
+      - ~
+      - Presta\MailReceiverBundle\Entity\Rule
+      - Presta\MailReceiverBundle\Controller\RuleController
+    calls:
+      - [setTranslationDomain, ['PrestaMailReceiverBundle']]
+      - [setLabelTranslatorStrategy, ['@sonata.admin.label.strategy.underscore']]
+    tags:
+      - { name: sonata.admin, manager_type: orm,  label: 'rule.name' }
+
+  presta_mail_receiver.admin.rule_condition:
+    class: Presta\MailReceiverBundle\Admin\RuleConditionAdmin
+    arguments:
+      - ~
+      - Presta\MailReceiverBundle\Entity\RuleCondition
+      - ~
+    calls:
+      - [setTranslationDomain, ['PrestaMailReceiverBundle']]
+      - [setLabelTranslatorStrategy, ['@sonata.admin.label.strategy.native']]
+    tags:
+      - { name: sonata.admin, manager_type: orm }
+
+  presta_mail_receiver.admin.rule_action:
+    class: Presta\MailReceiverBundle\Admin\RuleActionAdmin
+    arguments:
+      - ~
+      - Presta\MailReceiverBundle\Entity\RuleAction
+      - ~
+    calls:
+      - [setTranslationDomain, ['PrestaMailReceiverBundle']]
+      - [setLabelTranslatorStrategy, ['@sonata.admin.label.strategy.native']]
+    tags:
+      - { name: sonata.admin, manager_type: orm }
+
+  presta_mail_receiver.admin.execution:
+    class: Presta\MailReceiverBundle\Admin\ExecutionAdmin
+    arguments:
+      - ~
+      - Presta\MailReceiverBundle\Entity\Execution
+      - Presta\MailReceiverBundle\Controller\ExecutionController
+    calls:
+      - [setTranslationDomain, ['PrestaMailReceiverBundle']]
+      - [setLabelTranslatorStrategy, ['@sonata.admin.label.strategy.underscore']]
+    tags:
+      - { name: sonata.admin, manager_type: orm, label: 'execution.name' }
+
+  presta_mail_receiver.admin.rule_group:
+    class: Presta\MailReceiverBundle\Admin\RuleGroupAdmin
+    arguments:
+      - ~
+      - Presta\MailReceiverBundle\Entity\RuleGroup
+      - ~
+    calls:
+      - [setTranslationDomain, ['PrestaMailReceiverBundle']]
+      - [setLabelTranslatorStrategy, ['@sonata.admin.label.strategy.underscore']]
+    tags:
+      - { name: sonata.admin, manager_type: orm , label: 'rule_group.name'}
+
+  presta_mail_receiver.admin.rule_group_element:
+    class: Presta\MailReceiverBundle\Admin\RuleGroupElementAdmin
+    arguments:
+      - ~
+      - Presta\MailReceiverBundle\Entity\RuleGroupElement
+      - ~
+    calls:
+      - [setTranslationDomain, ['PrestaMailReceiverBundle']]
+      - [setLabelTranslatorStrategy, ['@sonata.admin.label.strategy.native']]
+    tags:
+      - { name: sonata.admin, manager_type: orm }
+
+  Presta\MailReceiverBundle\:
+    resource: '../../'
+    exclude: '../../{Admin,DependencyInjection,Entity,Resources,Tests}'
+
+  Presta\MailReceiverBundle\Controller\:
+    resource: '../../Controller'
+    tags: ['controller.service_arguments']
+
+  Presta\MailReceiverBundle\Command\ArchiveEmailCommand:
+    arguments:
+      $archive: '%presta.mail_receiver.archive%'
+
+  Presta\MailReceiverBundle\Command\ReceiveEmailCommand:
+    arguments:
+      $manager: '@doctrine.orm.default_entity_manager'
+
+  Presta\MailReceiverBundle\Repository\EmailRepository:
+    factory: ['@doctrine', 'getRepository']
+    arguments: ['Presta\MailReceiverBundle\Entity\Email']
+
+  Presta\MailReceiverBundle\Repository\ExecutionRepository:
+    factory: ['@doctrine', 'getRepository']
+    arguments: ['Presta\MailReceiverBundle\Entity\Execution']
+
+  Presta\MailReceiverBundle\Repository\RuleGroupRepository:
+    factory: ['@doctrine', 'getRepository']
+    arguments: ['Presta\MailReceiverBundle\Entity\RuleGroup']
+
+  Presta\MailReceiverBundle\Storage\ExecutionStorage:
+    arguments:
+      $objectManager: '@doctrine.orm.default_entity_manager'

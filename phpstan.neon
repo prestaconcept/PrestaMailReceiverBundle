@@ -1,0 +1,7 @@
+parameters:
+    level: 6
+    paths:
+        - src/
+    ignoreErrors:
+        - '{\:\:\$id is never written, only read.}'
+        - '{\:\:\$errorNames has no type specified.}'

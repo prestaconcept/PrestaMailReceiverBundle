@@ -1,0 +1,29 @@
+{# @var evaluation \Presta\MailReceiverBundle\Model\Evaluation #}
+{# @var ruleExecution \Presta\MailReceiverBundle\Model\RuleExecution #}
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th colspan="3">
+            <p>{{ ruleExecution.rule.name }}</p>
+            <p class=" text-muted">{{ ('rule.form.choice.condition_operator.' ~ ruleExecution.rule.conditionOperator)|trans({}, 'PrestaMailReceiverBundle') }}</p>
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for evaluation in ruleExecution.evaluations %}
+        <tr>
+            <td>{{ presta_describe_condition(evaluation.condition.type, evaluation.condition.settings) }}</td>
+            <td>{% include '@SonataAdmin/CRUD/display_boolean.html.twig' with {value: evaluation.satisfied} only %}</td>
+            <td>
+                {% if evaluation.errors is not empty %}
+                    <a href="{{ admin.generateObjectUrl('downloadEvaluationError', ruleExecution, {'evaluationId': evaluation.id}) }}"
+                       class="btn btn-default">
+                        <i class="fa fa-download"></i>
+                    </a>
+                {% endif %}
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>

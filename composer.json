@@ -1,0 +1,48 @@
+{
+  "name": "presta/mail-receiver-bundle",
+  "description": "A Symfony bundle to execute customized actions when receiving an email content.",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Prestaconcept",
+      "email": "contact@prestaconcept.net",
+      "homepage": "https://www.prestaconcept.net"
+    }
+  ],
+  "require": {
+    "php": "^8.1",
+    "doctrine/orm": "^2.14|^3.2",
+    "ext-mailparse": "*",
+    "php-mime-mail-parser/php-mime-mail-parser": "7.0.0",
+    "sonata-project/doctrine-orm-admin-bundle": "^4.13",
+    "sonata-project/admin-bundle": "^4.15",
+    "symfony/form": "^6.3|^7.0",
+    "symfony/framework-bundle": "^6.3|^7.0",
+    "symfony/mailer": "^6.3|^7.0",
+    "symfony/validator": "^6.3|^7.0",
+    "symfony/yaml": "^6.3|^7.0"
+  },
+  "require-dev": {
+    "phpstan/phpstan": "^1.10",
+    "phpunit/phpunit": "^9.5",
+    "phpspec/prophecy-phpunit": "^2.0",
+    "symfony/browser-kit": "^6.3|^7.0",
+    "symfony/css-selector": "^6.3|^7.0",
+    "symplify/easy-coding-standard": "^11.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Presta\\MailReceiverBundle\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Presta\\MailReceiverBundle\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.x-dev"
+    }
+  }
+}

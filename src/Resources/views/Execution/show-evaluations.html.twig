@@ -1,0 +1,32 @@
+{# @var admin \Sonata\AdminBundle\Admin\AdminInterface #}
+{# @var evaluation \Presta\MailReceiverBundle\Entity\ExecutionConditionEvaluation #}
+<td colspan="2">
+    {% spaceless %}
+        <p class=" text-muted">{{ ('rule.form.choice.condition_operator.' ~ object.rule.conditionOperator)|trans({}, 'PrestaMailReceiverBundle') }}</p>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>{{ 'execution.show.label.evaluations.condition'|trans({}, 'PrestaMailReceiverBundle') }}</th>
+                <th>{{ 'execution.show.label.evaluations.satisfied'|trans({}, 'PrestaMailReceiverBundle') }}</th>
+                <th>{{ 'execution.show.label.evaluations.error'|trans({}, 'PrestaMailReceiverBundle') }}</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for evaluation in value %}
+                <tr>
+                    <td>{{ presta_describe_condition(evaluation.conditionType, evaluation.conditionSettings) }}</td>
+                    <td>{% include '@SonataAdmin/CRUD/display_boolean.html.twig' with {value: evaluation.satisfied} only %}</td>
+                    <td>
+                        {% if evaluation.error is not empty %}
+                            <a href="{{ admin.generateObjectUrl('downloadEvaluationError', object, {'evaluationId': evaluation.id}) }}"
+                               class="btn btn-default">
+                                <i class="fa fa-download"></i>
+                            </a>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% endspaceless %}
+</td>

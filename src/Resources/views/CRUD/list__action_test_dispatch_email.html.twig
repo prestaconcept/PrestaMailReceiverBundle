@@ -1,0 +1,5 @@
+{% if admin.hasRoute('dispatchEmail') and admin.id(object) and admin.isGranted('SHOW', object)%}
+    <a href="{{ admin.generateObjectUrl('dispatchEmail', object) }}" class="btn btn-xs btn-default" title="{{ 'action_dispatch_email'|trans({}, 'PrestaMailReceiverBundle') }}">
+        <i class="glyphicon glyphicon-repeat"></i>
+    </a>
+{% endif %}
