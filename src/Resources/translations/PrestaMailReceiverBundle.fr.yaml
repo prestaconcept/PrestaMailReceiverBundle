@@ -38,9 +38,9 @@ email_received:
             sender: 'Expéditeur'
             recipient: 'Destinataire'
             body: 'Corps'
-            attachments: Pieces jointes
+            attachments: Pièces jointes
             headers: Headers
-            general: General
+            general: Général
     status:
         label_errored: en erreur
         label_waiting: en attente
@@ -72,7 +72,7 @@ rule:
             conditions: Conditions
             name: Nom de la règle
             to: Un seul destinataire attendu
-            breakpoint: lors de l'exécution des actions, si une action ayant un point d'arret est effectuée sans erreurs alors les actions suivantes ne sont pas effectuées
+            breakpoint: Lors de l'exécution des actions, si une action ayant un point d'arrêt est effectuée sans erreurs alors les actions suivantes ne sont pas effectuées
     list:
         label:
             name: Nom
@@ -82,25 +82,24 @@ rule:
     condition:
         label_subject_match: Sujet
         label_body_match: Corps du mail
-        label_has_attachments: A une ou des pieces jointes
+        label_has_attachments: A une ou des pièces jointes
         label_recipient_match: Destinataire
         label_sender_match: Expéditeur
     action:
         label_forward: Transférer
         label_notify: Notifier
-        label_create_candidature_action: Créer une Candidature
     label_conditions: Conditions
     label_actions: Actions
     description:
         conditions:
             body_match: Le corps du mail %operator% "%value%"
-            has_attachment: Le mail a une piece jointe
+            has_attachment: Le mail a une pièce jointe
             recipient_match: Le destinataire du mail %operator% "%value%"
             sender_match: L'expéditeur du mail %operator% "%value%"
             subject_match: Le sujet du mail %operator% "%value%"
             operator:
                 unknown: [inconnu]
-                match: correspond à l'expression réguliere (Regexp)
+                match: correspond à l'expression régulière (Regexp)
                 contains: contient
                 equals: est égal à
         actions:
@@ -114,22 +113,22 @@ execution:
             email: Email
             rule: Règle
             satisfied: Satisfait par la règle
-            performed: Action performée
+            performed: Action réalisée
             date: Date
     filter:
         label:
             email: Email
             rule: Règle
             satisfied: Satisfait par la règle
-            performed: Action performée
+            performed: Action réalisée
             date: Date
     show:
         label:
             email: Email
             rule: Règle
             satisfied: Satisfait par la règle
-            performed: Action performée
-            test_condition: Execution de test des conditions
+            performed: Action réalisée
+            test_condition: Exécution de test des conditions
             date: Date
             evaluations:
                 condition: Condition évaluée
@@ -141,7 +140,7 @@ execution:
                 error: Erreur
     result:
         success: Réussie
-        failed: Echouée
+        failed: Échouée
         skipped: Non exécutée
 
 rule_group:
@@ -165,20 +164,20 @@ list:
 breadcrumb:
     link_rule_list: Règles
     link_rule_create: Règles
-    link_execution_list: Executions
+    link_execution_list: Exécutions
     link_rule_group_list: Groupement de règles
     link_email_list: Emails reçus
 
 form:
     group_rule_form_fieldset_general: Général
-    group_rule_form_fieldset_conditions: Parametrer les conditions
-    group_rule_form_fieldset_actions: Parametrer les actions
+    group_rule_form_fieldset_conditions: Paramétrer les conditions
+    group_rule_form_fieldset_actions: Paramétrer les actions
     group_rule_group_name: Groupement de règles
 
 show:
     group_email_received_show_label_general: Général
     group_email_received_show_label_headers: Headers
-    group_execution_show_fieldset_evaluations: Evaluations des conditions
+    group_execution_show_fieldset_evaluations: Évaluations des conditions
     group_execution_show_fieldset_general: Général
     group_execution_show_fieldset_results: Résultats des actions
 
