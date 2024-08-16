@@ -2,7 +2,7 @@
 {# @var result \Presta\MailReceiverBundle\Entity\ExecutionActionResult #}
 
 <td colspan="2">
-    {% spaceless %}
+    {% apply spaceless %}
         <table class="table table-striped">
             <thead>
             <tr>
@@ -38,5 +38,5 @@
             {% endfor %}
             </tbody>
         </table>
-    {% endspaceless %}
+    {% endapply %}
 </td>

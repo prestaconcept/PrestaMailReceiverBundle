@@ -1,7 +1,7 @@
 {# @var admin \Sonata\AdminBundle\Admin\AdminInterface #}
 {# @var evaluation \Presta\MailReceiverBundle\Entity\ExecutionConditionEvaluation #}
 <td colspan="2">
-    {% spaceless %}
+    {% apply spaceless %}
         <p class=" text-muted">{{ ('rule.form.choice.condition_operator.' ~ object.rule.conditionOperator)|trans({}, 'PrestaMailReceiverBundle') }}</p>
         <table class="table table-striped">
             <thead>
@@ -28,5 +28,5 @@
             {% endfor %}
             </tbody>
         </table>
-    {% endspaceless %}
+    {% endapply %}
 </td>
