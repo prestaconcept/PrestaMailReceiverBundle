@@ -1,0 +1,185 @@
+email_received:
+    batch:
+        set_status: 'Status change'
+    flash:
+        set_status:
+            no_status: 'Unable to find the status to assign.'
+            error: 'An error occurred during the status change.'
+            success: 'Status change completed.'
+        email_dispatched: The email has been reprocessed
+        tested: The email has been tested on the conditions of the rules without performing any actions
+    menu:
+        executions: Associated executions
+    form:
+        label:
+            body: Email body
+            raw: Raw email
+            recipient: To
+            sender: From
+            subject: Subject
+    filter:
+        label:
+            body: Email body
+            recipient: Sent to
+            sender: Sent by
+            status: Statut
+            subject: Subject
+    list:
+        label:
+            body: Email body
+            recipient: To
+            sender: From
+            sent_at: Sent on
+            status: Status
+            subject: Subject
+    show:
+        label:
+            subject: 'Subject'
+            sender: 'Sender'
+            recipient: 'Recipient'
+            body: 'Body'
+            attachments: Attachments
+            headers: Headers
+            general: General
+    status:
+        label_errored: in error
+        label_waiting: pending
+        label_treated: processed
+        label_unmatched: not applied
+
+    name: Emails received
+
+rule:
+    menu:
+        executions: Associated executions
+    form:
+        choice:
+            condition_operator:
+                or: At least one condition must be verified
+                and: All conditions must be verified
+        label:
+            actions: Actions
+            conditions: Conditions
+            name: Name
+            condition_operator: Operator
+            breakpoint: Breakpoint
+            to: Recipient
+            operator: Operator
+            value: Value
+            from: Sender
+        help:
+            actions: Actions
+            conditions: Conditions
+            name: Rule name
+            to: Only one recipient expected
+            breakpoint: When executing actions, if an action with a breakpoint is performed without errors, then the following actions are not performed
+    list:
+        label:
+            name: Name
+            conditions: Conditions
+            actions: Actions
+    name: Rules
+    condition:
+        label_subject_match: Subject
+        label_body_match: Email body
+        label_has_attachments: Has one or more attachments
+        label_recipient_match: Recipient
+        label_sender_match: Sender
+    action:
+        label_forward: Forward
+        label_notify: Notify
+    label_conditions: Conditions
+    label_actions: Actions
+    description:
+        conditions:
+            body_match: The email body %operator% "%value%"
+            has_attachment: The email has an attachment
+            recipient_match: The email recipient %operator% "%value%"
+            sender_match: The email sender %operator% "%value%"
+            subject_match: The email subject %operator% "%value%"
+            operator:
+                unknown: [unknown]
+                match: matches the regular expression (Regexp)
+                contains: contains
+                equals: is equal to
+        actions:
+            forward: Forward to "%to%"
+            notify: The address "%from%" will notify "%to%"
+
+execution:
+    name: Executions
+    list:
+        label:
+            email: Email
+            rule: Rule
+            satisfied: Satisfied by the rule
+            performed: Action performed
+            date: Date
+    filter:
+        label:
+            email: Email
+            rule: Rule
+            satisfied: Satisfied by the rule
+            performed: Action performed
+            date: Date
+    show:
+        label:
+            email: Email
+            rule: Rule
+            satisfied: Satisfied by the rule
+            performed: Action performed
+            test_condition: Execution of conditions test
+            date: Date
+            evaluations:
+                condition: Condition assessed
+                satisfied: Condition satisfied
+                error: Error
+            results:
+                action: Action taken
+                result: Action result
+                error: Error
+    result:
+        success: Successful
+        failed: Failed
+        skipped: Not performed
+
+rule_group:
+    name: Rules group
+    list:
+        label:
+            name: Name
+    form:
+        label:
+            name: Name
+            rules_elements: Rules
+    elements:
+        form:
+            label:
+                rules: Rules
+                breakpoint: Breakpoint
+
+list:
+    label__action: Actions
+
+breadcrumb:
+    link_rule_list: Rules
+    link_rule_create: Rules
+    link_execution_list: Executions
+    link_rule_group_list: Rules group
+    link_email_list: Emails received
+
+form:
+    group_rule_form_fieldset_general: General
+    group_rule_form_fieldset_conditions: Set the conditions
+    group_rule_form_fieldset_actions: Set the actions
+    group_rule_group_name: Rules group
+
+show:
+    group_email_received_show_label_general: General
+    group_email_received_show_label_headers: Headers
+    group_execution_show_fieldset_evaluations: Condition assessments
+    group_execution_show_fieldset_general: General
+    group_execution_show_fieldset_results: Action results
+
+action_test_dispatch_email: List of processed tests
+action_dispatch_email: Reprocess
