@@ -8,7 +8,7 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 
 final class Services
 {
-    private const TRANSLATION_CATALOG = __DIR__ . '/../../Resources/translations/PrestaMailReceiverBundle.fr.yaml';
+    private const TRANSLATION_CATALOG = __DIR__ . '/../../translations/PrestaMailReceiverBundle.fr.yaml';
 
     private static $services = [];
 

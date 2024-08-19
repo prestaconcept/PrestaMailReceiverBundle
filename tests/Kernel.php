@@ -81,9 +81,9 @@ final class Kernel extends BaseKernel
                 'naming_strategy' => 'doctrine.orm.naming_strategy.underscore',
                 'mappings' => [
                     'PrestaMailReceiverBundle' => [
-                        'is_bundle' => true,
+                        'is_bundle' => false,
                         'type' => 'attribute',
-                        'dir' => 'Entity',
+                        'dir' => '%kernel.project_dir%/src/Entity',
                         'prefix' => 'Presta\\MailReceiverBundle\\Entity',
                         'alias' => 'PrestaMailReceiverBundle',
                     ],
