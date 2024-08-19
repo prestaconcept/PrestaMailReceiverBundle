@@ -23,8 +23,6 @@ You will find the detailed documentation in the following links:
 * [Features](doc/features.md)
 * [Concepts](doc/concepts.md)
 
-## Languages
-French and English are supported
 
 ---
 
