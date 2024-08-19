@@ -91,11 +91,11 @@ services:
       - { name: sonata.admin, manager_type: orm }
 
   Presta\MailReceiverBundle\:
-    resource: '../../'
-    exclude: '../../{Admin,DependencyInjection,Entity,Resources,Tests}'
+    resource: '../src/'
+    exclude: '../src/{Admin,DependencyInjection,Entity,Tests}'
 
   Presta\MailReceiverBundle\Controller\:
-    resource: '../../Controller'
+    resource: '../src/Controller'
     tags: ['controller.service_arguments']
 
   Presta\MailReceiverBundle\Command\ArchiveEmailCommand:

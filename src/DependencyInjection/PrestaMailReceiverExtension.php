@@ -24,7 +24,7 @@ final class PrestaMailReceiverExtension extends Extension
         $container->setParameter('presta.mail_receiver.archive', $config['archive']);
 
         //todo before going OS : convert YML to XML
-        $loader = new YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
+        $loader = new YamlFileLoader($container, new FileLocator(__DIR__ . '/../../config'));
         $loader->load('services.yaml');
 
         $container->registerForAutoconfiguration(RuleConditionInterface::class)

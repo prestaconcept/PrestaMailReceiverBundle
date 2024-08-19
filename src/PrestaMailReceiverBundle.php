@@ -15,4 +15,12 @@ final class PrestaMailReceiverBundle extends Bundle
     {
         $container->addCompilerPass(new RegisterRuleComponentsPass());
     }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function getPath(): string
+    {
+        return \dirname(__DIR__);
+    }
 }
