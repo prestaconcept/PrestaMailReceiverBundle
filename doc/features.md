@@ -1,8 +1,20 @@
-# Integration into Sonata
+# Features included in PrestaMailReceiverBundle
+
+## Commands
+
+- `presta:mail-receiver:receive` : Receive email content and store it
+- `presta:mail-receiver:dispatch` : Dispatch waiting emails to matching rules actions
+- `presta:mail-receiver:archive` : Remove emails that have spent a certain amount of time in a given status
+  - `waiting`: 1 month
+  - `treated`: 3 days
+  - `unmatched`: 4 months
+  - `errored`: 2 weeks
+
+## Integration into Sonata
 
 The bundle comes with Sonata interfaces for configuring rules and groups of rules, and for viewing incoming e-mails and rule executions.
 
-## Menu
+### Menu
 The available items are :
 - `presta_mail_receiver.admin.email`
 - `presta_mail_receiver.admin.rule`
@@ -29,33 +41,33 @@ The available items are :
 >
 > ![menu](img/menu.jpg)
 
-## Emails received
-### list
+### Emails received
+#### list
 ![email-received-list.jpg](img/email-received-list.jpg)
-### details
+#### details
 ![email-received-details.jpg](img/email-received-details.jpg)
-### processed tests
+#### processed tests
 ![email-received-tests.jpg](img/email-received-tests.jpg)
 
-## Rules
-### list
+### Rules
+#### list
 ![rules-list.jpg](img/rules-list.jpg)
-### edition
+#### edition
 ![rules-edition-general.jpg](img/rules-edition-general.jpg)
 ![rules-edition-conditions.jpg](img/rules-edition-conditions.jpg)
 ![rules-edition-actions.jpg](img/rules-edition-actions.jpg)
-### edition - add action/condition
+#### edition - add action/condition
 ![rules-edition-add-condition.jpg](img/rules-edition-add-condition.jpg)
 ![rules-edition-add-action.jpg](img/rules-edition-add-action.jpg)
 
-## Executions
-### list
+### Executions
+#### list
 ![executions-list.jpg](img/executions-list.jpg)
-### details
+#### details
 ![executions-details.jpg](img/executions-details.jpg)
 
-## Rules group
-### list
+### Rules group
+#### list
 ![rules-groups-list.jpg](img/rules-groups-list.jpg)
-### edition
+#### edition
 ![rules-groups-edition.jpg](img/rules-groups-edition.jpg)

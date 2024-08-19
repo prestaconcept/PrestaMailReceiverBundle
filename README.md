@@ -20,16 +20,9 @@ This bundle enables you to execute customized actions when receiving an email co
 
 You will find the detailed documentation in the following links:
 * [Installation](doc/installation.md)
-* [Sonata](doc/sonata.md)
-* [Commands](doc/commands.md)
-* [Rules](doc/rules.md)
-* [Actions](doc/actions.md)
-* [Conditions](doc/conditions.md)
-* [Help messages and labels](doc/help-messages-labels.md)
-* [Settings for actions/conditions](doc/actions-conditions-settings.md)
+* [Features](doc/features.md)
+* [Concepts](doc/concepts.md)
 
-## Languages
-French and English are supported
 
 ---
 
