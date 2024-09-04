@@ -9,7 +9,7 @@ use Presta\MailReceiverBundle\Rule\Condition\RuleConditionInterface;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
-use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
+use Symfony\Component\DependencyInjection\Loader\PhpFileLoader;
 
 final class PrestaMailReceiverExtension extends Extension
 {
@@ -23,9 +23,8 @@ final class PrestaMailReceiverExtension extends Extension
 
         $container->setParameter('presta.mail_receiver.archive', $config['archive']);
 
-        //todo before going OS : convert YML to XML
-        $loader = new YamlFileLoader($container, new FileLocator(__DIR__ . '/../../config'));
-        $loader->load('services.yaml');
+        $loader = new PhpFileLoader($container, new FileLocator(__DIR__ . '/../../config'));
+        $loader->load('services.php');
 
         $container->registerForAutoconfiguration(RuleConditionInterface::class)
             ->addTag('presta.mail_receiver.rule_condition');

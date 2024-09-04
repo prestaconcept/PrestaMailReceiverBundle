@@ -5,14 +5,20 @@ declare(strict_types=1);
 namespace Presta\MailReceiverBundle\Repository;
 
 use DateTimeInterface;
-use Doctrine\ORM\EntityRepository;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\Persistence\ManagerRegistry;
 use Presta\MailReceiverBundle\Entity\Email;
 
 /**
- * @extends EntityRepository<Email>
+ * @extends ServiceEntityRepository<Email>
  */
-final class EmailRepository extends EntityRepository
+final class EmailRepository extends ServiceEntityRepository
 {
+    public function __construct(ManagerRegistry $registry)
+    {
+        parent::__construct($registry, Email::class);
+    }
+
     public function delete(string $status, DateTimeInterface $since): int
     {
         return (int)$this->getEntityManager()->createQueryBuilder()

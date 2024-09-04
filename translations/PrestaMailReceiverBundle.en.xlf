@@ -1,0 +1,507 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="email_received.batch.set_status">
+        <source>email_received.batch.set_status</source>
+        <target>Status change</target>
+      </trans-unit>
+      <trans-unit id="email_received.flash.set_status.no_status">
+        <source>email_received.flash.set_status.no_status</source>
+        <target>Unable to find the status to assign.</target>
+      </trans-unit>
+      <trans-unit id="email_received.flash.set_status.error">
+        <source>email_received.flash.set_status.error</source>
+        <target>An error occurred during the status change.</target>
+      </trans-unit>
+      <trans-unit id="email_received.flash.set_status.success">
+        <source>email_received.flash.set_status.success</source>
+        <target>Status change completed.</target>
+      </trans-unit>
+      <trans-unit id="email_received.flash.email_dispatched">
+        <source>email_received.flash.email_dispatched</source>
+        <target>The email has been reprocessed</target>
+      </trans-unit>
+      <trans-unit id="email_received.flash.tested">
+        <source>email_received.flash.tested</source>
+        <target>The email has been tested on the conditions of the rules without performing any actions</target>
+      </trans-unit>
+      <trans-unit id="email_received.menu.executions">
+        <source>email_received.menu.executions</source>
+        <target>Associated executions</target>
+      </trans-unit>
+      <trans-unit id="email_received.form.label.body">
+        <source>email_received.form.label.body</source>
+        <target>Email body</target>
+      </trans-unit>
+      <trans-unit id="email_received.form.label.raw">
+        <source>email_received.form.label.raw</source>
+        <target>Raw email</target>
+      </trans-unit>
+      <trans-unit id="email_received.form.label.recipient">
+        <source>email_received.form.label.recipient</source>
+        <target>To</target>
+      </trans-unit>
+      <trans-unit id="email_received.form.label.sender">
+        <source>email_received.form.label.sender</source>
+        <target>From</target>
+      </trans-unit>
+      <trans-unit id="email_received.form.label.subject">
+        <source>email_received.form.label.subject</source>
+        <target>Subject</target>
+      </trans-unit>
+      <trans-unit id="email_received.filter.label.body">
+        <source>email_received.filter.label.body</source>
+        <target>Email body</target>
+      </trans-unit>
+      <trans-unit id="email_received.filter.label.recipient">
+        <source>email_received.filter.label.recipient</source>
+        <target>Sent to</target>
+      </trans-unit>
+      <trans-unit id="email_received.filter.label.sender">
+        <source>email_received.filter.label.sender</source>
+        <target>Sent by</target>
+      </trans-unit>
+      <trans-unit id="email_received.filter.label.status">
+        <source>email_received.filter.label.status</source>
+        <target>Statut</target>
+      </trans-unit>
+      <trans-unit id="email_received.filter.label.subject">
+        <source>email_received.filter.label.subject</source>
+        <target>Subject</target>
+      </trans-unit>
+      <trans-unit id="email_received.list.label.body">
+        <source>email_received.list.label.body</source>
+        <target>Email body</target>
+      </trans-unit>
+      <trans-unit id="email_received.list.label.recipient">
+        <source>email_received.list.label.recipient</source>
+        <target>To</target>
+      </trans-unit>
+      <trans-unit id="email_received.list.label.sender">
+        <source>email_received.list.label.sender</source>
+        <target>From</target>
+      </trans-unit>
+      <trans-unit id="email_received.list.label.sent_at">
+        <source>email_received.list.label.sent_at</source>
+        <target>Sent on</target>
+      </trans-unit>
+      <trans-unit id="email_received.list.label.status">
+        <source>email_received.list.label.status</source>
+        <target>Status</target>
+      </trans-unit>
+      <trans-unit id="email_received.list.label.subject">
+        <source>email_received.list.label.subject</source>
+        <target>Subject</target>
+      </trans-unit>
+      <trans-unit id="email_received.show.label.subject">
+        <source>email_received.show.label.subject</source>
+        <target>Subject</target>
+      </trans-unit>
+      <trans-unit id="email_received.show.label.sender">
+        <source>email_received.show.label.sender</source>
+        <target>Sender</target>
+      </trans-unit>
+      <trans-unit id="email_received.show.label.recipient">
+        <source>email_received.show.label.recipient</source>
+        <target>Recipient</target>
+      </trans-unit>
+      <trans-unit id="email_received.show.label.body">
+        <source>email_received.show.label.body</source>
+        <target>Body</target>
+      </trans-unit>
+      <trans-unit id="email_received.show.label.attachments">
+        <source>email_received.show.label.attachments</source>
+        <target>Attachments</target>
+      </trans-unit>
+      <trans-unit id="email_received.show.label.headers">
+        <source>email_received.show.label.headers</source>
+        <target>Headers</target>
+      </trans-unit>
+      <trans-unit id="email_received.show.label.general">
+        <source>email_received.show.label.general</source>
+        <target>General</target>
+      </trans-unit>
+      <trans-unit id="email_received.status.label_errored">
+        <source>email_received.status.label_errored</source>
+        <target>in error</target>
+      </trans-unit>
+      <trans-unit id="email_received.status.label_waiting">
+        <source>email_received.status.label_waiting</source>
+        <target>pending</target>
+      </trans-unit>
+      <trans-unit id="email_received.status.label_treated">
+        <source>email_received.status.label_treated</source>
+        <target>processed</target>
+      </trans-unit>
+      <trans-unit id="email_received.status.label_unmatched">
+        <source>email_received.status.label_unmatched</source>
+        <target>not applied</target>
+      </trans-unit>
+      <trans-unit id="email_received.name">
+        <source>email_received.name</source>
+        <target>Emails received</target>
+      </trans-unit>
+      <trans-unit id="rule.menu.executions">
+        <source>rule.menu.executions</source>
+        <target>Associated executions</target>
+      </trans-unit>
+      <trans-unit id="rule.form.choice.condition_operator.or">
+        <source>rule.form.choice.condition_operator.or</source>
+        <target>At least one condition must be verified</target>
+      </trans-unit>
+      <trans-unit id="rule.form.choice.condition_operator.and">
+        <source>rule.form.choice.condition_operator.and</source>
+        <target>All conditions must be verified</target>
+      </trans-unit>
+      <trans-unit id="rule.form.label.actions">
+        <source>rule.form.label.actions</source>
+        <target>Actions</target>
+      </trans-unit>
+      <trans-unit id="rule.form.label.conditions">
+        <source>rule.form.label.conditions</source>
+        <target>Conditions</target>
+      </trans-unit>
+      <trans-unit id="rule.form.label.name">
+        <source>rule.form.label.name</source>
+        <target>Name</target>
+      </trans-unit>
+      <trans-unit id="rule.form.label.condition_operator">
+        <source>rule.form.label.condition_operator</source>
+        <target>Operator</target>
+      </trans-unit>
+      <trans-unit id="rule.form.label.breakpoint">
+        <source>rule.form.label.breakpoint</source>
+        <target>Breakpoint</target>
+      </trans-unit>
+      <trans-unit id="rule.form.label.to">
+        <source>rule.form.label.to</source>
+        <target>Recipient</target>
+      </trans-unit>
+      <trans-unit id="rule.form.label.operator">
+        <source>rule.form.label.operator</source>
+        <target>Operator</target>
+      </trans-unit>
+      <trans-unit id="rule.form.label.value">
+        <source>rule.form.label.value</source>
+        <target>Value</target>
+      </trans-unit>
+      <trans-unit id="rule.form.label.from">
+        <source>rule.form.label.from</source>
+        <target>Sender</target>
+      </trans-unit>
+      <trans-unit id="rule.form.help.actions">
+        <source>rule.form.help.actions</source>
+        <target>Actions</target>
+      </trans-unit>
+      <trans-unit id="rule.form.help.conditions">
+        <source>rule.form.help.conditions</source>
+        <target>Conditions</target>
+      </trans-unit>
+      <trans-unit id="rule.form.help.name">
+        <source>rule.form.help.name</source>
+        <target>Rule name</target>
+      </trans-unit>
+      <trans-unit id="rule.form.help.to">
+        <source>rule.form.help.to</source>
+        <target>Only one recipient expected</target>
+      </trans-unit>
+      <trans-unit id="rule.form.help.breakpoint">
+        <source>rule.form.help.breakpoint</source>
+        <target>When executing actions, if an action with a breakpoint is performed without errors, then the following actions are not performed</target>
+      </trans-unit>
+      <trans-unit id="rule.list.label.name">
+        <source>rule.list.label.name</source>
+        <target>Name</target>
+      </trans-unit>
+      <trans-unit id="rule.list.label.conditions">
+        <source>rule.list.label.conditions</source>
+        <target>Conditions</target>
+      </trans-unit>
+      <trans-unit id="rule.list.label.actions">
+        <source>rule.list.label.actions</source>
+        <target>Actions</target>
+      </trans-unit>
+      <trans-unit id="rule.name">
+        <source>rule.name</source>
+        <target>Rules</target>
+      </trans-unit>
+      <trans-unit id="rule.condition.label_subject_match">
+        <source>rule.condition.label_subject_match</source>
+        <target>Subject</target>
+      </trans-unit>
+      <trans-unit id="rule.condition.label_body_match">
+        <source>rule.condition.label_body_match</source>
+        <target>Email body</target>
+      </trans-unit>
+      <trans-unit id="rule.condition.label_has_attachments">
+        <source>rule.condition.label_has_attachments</source>
+        <target>Has one or more attachments</target>
+      </trans-unit>
+      <trans-unit id="rule.condition.label_recipient_match">
+        <source>rule.condition.label_recipient_match</source>
+        <target>Recipient</target>
+      </trans-unit>
+      <trans-unit id="rule.condition.label_sender_match">
+        <source>rule.condition.label_sender_match</source>
+        <target>Sender</target>
+      </trans-unit>
+      <trans-unit id="rule.action.label_forward">
+        <source>rule.action.label_forward</source>
+        <target>Forward</target>
+      </trans-unit>
+      <trans-unit id="rule.action.label_notify">
+        <source>rule.action.label_notify</source>
+        <target>Notify</target>
+      </trans-unit>
+      <trans-unit id="rule.label_conditions">
+        <source>rule.label_conditions</source>
+        <target>Conditions</target>
+      </trans-unit>
+      <trans-unit id="rule.label_actions">
+        <source>rule.label_actions</source>
+        <target>Actions</target>
+      </trans-unit>
+      <trans-unit id="rule.description.conditions.body_match">
+        <source>rule.description.conditions.body_match</source>
+        <target>The email body %operator% "%value%"</target>
+      </trans-unit>
+      <trans-unit id="rule.description.conditions.has_attachment">
+        <source>rule.description.conditions.has_attachment</source>
+        <target>The email has an attachment</target>
+      </trans-unit>
+      <trans-unit id="rule.description.conditions.recipient_match">
+        <source>rule.description.conditions.recipient_match</source>
+        <target>The email recipient %operator% "%value%"</target>
+      </trans-unit>
+      <trans-unit id="rule.description.conditions.sender_match">
+        <source>rule.description.conditions.sender_match</source>
+        <target>The email sender %operator% "%value%"</target>
+      </trans-unit>
+      <trans-unit id="rule.description.conditions.subject_match">
+        <source>rule.description.conditions.subject_match</source>
+        <target>The email subject %operator% "%value%"</target>
+      </trans-unit>
+      <trans-unit id="rule.description.conditions.operator.unknown">
+        <source>rule.description.conditions.operator.unknown</source>
+        <target>[unknown]</target>
+      </trans-unit>
+      <trans-unit id="rule.description.conditions.operator.match">
+        <source>rule.description.conditions.operator.match</source>
+        <target>matches the regular expression (Regexp)</target>
+      </trans-unit>
+      <trans-unit id="rule.description.conditions.operator.contains">
+        <source>rule.description.conditions.operator.contains</source>
+        <target>contains</target>
+      </trans-unit>
+      <trans-unit id="rule.description.conditions.operator.equals">
+        <source>rule.description.conditions.operator.equals</source>
+        <target>is equal to</target>
+      </trans-unit>
+      <trans-unit id="rule.description.actions.forward">
+        <source>rule.description.actions.forward</source>
+        <target>Forward to "%to%"</target>
+      </trans-unit>
+      <trans-unit id="rule.description.actions.notify">
+        <source>rule.description.actions.notify</source>
+        <target>The address "%from%" will notify "%to%"</target>
+      </trans-unit>
+      <trans-unit id="execution.name">
+        <source>execution.name</source>
+        <target>Executions</target>
+      </trans-unit>
+      <trans-unit id="execution.list.label.email">
+        <source>execution.list.label.email</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="execution.list.label.rule">
+        <source>execution.list.label.rule</source>
+        <target>Rule</target>
+      </trans-unit>
+      <trans-unit id="execution.list.label.satisfied">
+        <source>execution.list.label.satisfied</source>
+        <target>Satisfied by the rule</target>
+      </trans-unit>
+      <trans-unit id="execution.list.label.performed">
+        <source>execution.list.label.performed</source>
+        <target>Action performed</target>
+      </trans-unit>
+      <trans-unit id="execution.list.label.date">
+        <source>execution.list.label.date</source>
+        <target>Date</target>
+      </trans-unit>
+      <trans-unit id="execution.filter.label.email">
+        <source>execution.filter.label.email</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="execution.filter.label.rule">
+        <source>execution.filter.label.rule</source>
+        <target>Rule</target>
+      </trans-unit>
+      <trans-unit id="execution.filter.label.satisfied">
+        <source>execution.filter.label.satisfied</source>
+        <target>Satisfied by the rule</target>
+      </trans-unit>
+      <trans-unit id="execution.filter.label.performed">
+        <source>execution.filter.label.performed</source>
+        <target>Action performed</target>
+      </trans-unit>
+      <trans-unit id="execution.filter.label.date">
+        <source>execution.filter.label.date</source>
+        <target>Date</target>
+      </trans-unit>
+      <trans-unit id="execution.show.label.email">
+        <source>execution.show.label.email</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="execution.show.label.rule">
+        <source>execution.show.label.rule</source>
+        <target>Rule</target>
+      </trans-unit>
+      <trans-unit id="execution.show.label.satisfied">
+        <source>execution.show.label.satisfied</source>
+        <target>Satisfied by the rule</target>
+      </trans-unit>
+      <trans-unit id="execution.show.label.performed">
+        <source>execution.show.label.performed</source>
+        <target>Action performed</target>
+      </trans-unit>
+      <trans-unit id="execution.show.label.test_condition">
+        <source>execution.show.label.test_condition</source>
+        <target>Execution of conditions test</target>
+      </trans-unit>
+      <trans-unit id="execution.show.label.date">
+        <source>execution.show.label.date</source>
+        <target>Date</target>
+      </trans-unit>
+      <trans-unit id="execution.show.label.evaluations.condition">
+        <source>execution.show.label.evaluations.condition</source>
+        <target>Condition assessed</target>
+      </trans-unit>
+      <trans-unit id="execution.show.label.evaluations.satisfied">
+        <source>execution.show.label.evaluations.satisfied</source>
+        <target>Condition satisfied</target>
+      </trans-unit>
+      <trans-unit id="execution.show.label.evaluations.error">
+        <source>execution.show.label.evaluations.error</source>
+        <target>Error</target>
+      </trans-unit>
+      <trans-unit id="execution.show.label.results.action">
+        <source>execution.show.label.results.action</source>
+        <target>Action taken</target>
+      </trans-unit>
+      <trans-unit id="execution.show.label.results.result">
+        <source>execution.show.label.results.result</source>
+        <target>Action result</target>
+      </trans-unit>
+      <trans-unit id="execution.show.label.results.error">
+        <source>execution.show.label.results.error</source>
+        <target>Error</target>
+      </trans-unit>
+      <trans-unit id="execution.result.success">
+        <source>execution.result.success</source>
+        <target>Successful</target>
+      </trans-unit>
+      <trans-unit id="execution.result.failed">
+        <source>execution.result.failed</source>
+        <target>Failed</target>
+      </trans-unit>
+      <trans-unit id="execution.result.skipped">
+        <source>execution.result.skipped</source>
+        <target>Not performed</target>
+      </trans-unit>
+      <trans-unit id="rule_group.name">
+        <source>rule_group.name</source>
+        <target>Rules group</target>
+      </trans-unit>
+      <trans-unit id="rule_group.list.label.name">
+        <source>rule_group.list.label.name</source>
+        <target>Name</target>
+      </trans-unit>
+      <trans-unit id="rule_group.form.label.name">
+        <source>rule_group.form.label.name</source>
+        <target>Name</target>
+      </trans-unit>
+      <trans-unit id="rule_group.form.label.rules_elements">
+        <source>rule_group.form.label.rules_elements</source>
+        <target>Rules</target>
+      </trans-unit>
+      <trans-unit id="rule_group.elements.form.label.rules">
+        <source>rule_group.elements.form.label.rules</source>
+        <target>Rules</target>
+      </trans-unit>
+      <trans-unit id="rule_group.elements.form.label.breakpoint">
+        <source>rule_group.elements.form.label.breakpoint</source>
+        <target>Breakpoint</target>
+      </trans-unit>
+      <trans-unit id="list.label__action">
+        <source>list.label__action</source>
+        <target>Actions</target>
+      </trans-unit>
+      <trans-unit id="breadcrumb.link_rule_list">
+        <source>breadcrumb.link_rule_list</source>
+        <target>Rules</target>
+      </trans-unit>
+      <trans-unit id="breadcrumb.link_rule_create">
+        <source>breadcrumb.link_rule_create</source>
+        <target>Rules</target>
+      </trans-unit>
+      <trans-unit id="breadcrumb.link_execution_list">
+        <source>breadcrumb.link_execution_list</source>
+        <target>Executions</target>
+      </trans-unit>
+      <trans-unit id="breadcrumb.link_rule_group_list">
+        <source>breadcrumb.link_rule_group_list</source>
+        <target>Rules group</target>
+      </trans-unit>
+      <trans-unit id="breadcrumb.link_email_list">
+        <source>breadcrumb.link_email_list</source>
+        <target>Emails received</target>
+      </trans-unit>
+      <trans-unit id="form.group_rule_form_fieldset_general">
+        <source>form.group_rule_form_fieldset_general</source>
+        <target>General</target>
+      </trans-unit>
+      <trans-unit id="form.group_rule_form_fieldset_conditions">
+        <source>form.group_rule_form_fieldset_conditions</source>
+        <target>Set the conditions</target>
+      </trans-unit>
+      <trans-unit id="form.group_rule_form_fieldset_actions">
+        <source>form.group_rule_form_fieldset_actions</source>
+        <target>Set the actions</target>
+      </trans-unit>
+      <trans-unit id="form.group_rule_group_name">
+        <source>form.group_rule_group_name</source>
+        <target>Rules group</target>
+      </trans-unit>
+      <trans-unit id="show.group_email_received_show_label_general">
+        <source>show.group_email_received_show_label_general</source>
+        <target>General</target>
+      </trans-unit>
+      <trans-unit id="show.group_email_received_show_label_headers">
+        <source>show.group_email_received_show_label_headers</source>
+        <target>Headers</target>
+      </trans-unit>
+      <trans-unit id="show.group_execution_show_fieldset_evaluations">
+        <source>show.group_execution_show_fieldset_evaluations</source>
+        <target>Condition assessments</target>
+      </trans-unit>
+      <trans-unit id="show.group_execution_show_fieldset_general">
+        <source>show.group_execution_show_fieldset_general</source>
+        <target>General</target>
+      </trans-unit>
+      <trans-unit id="show.group_execution_show_fieldset_results">
+        <source>show.group_execution_show_fieldset_results</source>
+        <target>Action results</target>
+      </trans-unit>
+      <trans-unit id="action_test_dispatch_email">
+        <source>action_test_dispatch_email</source>
+        <target>List of processed tests</target>
+      </trans-unit>
+      <trans-unit id="action_dispatch_email">
+        <source>action_dispatch_email</source>
+        <target>Reprocess</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
