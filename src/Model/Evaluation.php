@@ -22,7 +22,7 @@ class Evaluation
         private RuleExecution $execution,
         private RuleCondition $condition,
         private bool $satisfied,
-        Throwable $exception = null
+        Throwable|null $exception = null
     ) {
         if ($condition->getType() === null) {
             throw new LogicException('Condition has no type');

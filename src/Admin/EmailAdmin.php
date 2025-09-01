@@ -45,8 +45,11 @@ final class EmailAdmin extends AbstractAdmin
     /**
      * @inheritdoc
      */
-    protected function configureTabMenu(MenuItemInterface $menu, string $action, AdminInterface $childAdmin = null): void
-    {
+    protected function configureTabMenu(
+        MenuItemInterface $menu,
+        string $action,
+        AdminInterface|null $childAdmin = null,
+    ): void {
         if (in_array($action, ['show', 'edit'], true)) {
             $menu->addChild(
                 'email_received.menu.executions',

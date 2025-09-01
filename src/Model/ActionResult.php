@@ -16,7 +16,7 @@ class ActionResult
         private RuleExecution $execution,
         private RuleAction $action,
         private string $result,
-        Throwable $exception = null
+        Throwable|null $exception = null
     ) {
         if ($action->getType() === null) {
             throw new LogicException('Action has no type');
