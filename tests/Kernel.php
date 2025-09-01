@@ -20,6 +20,7 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 use Symfony\Component\HttpKernel\Kernel as BaseKernel;
 use Symfony\Component\HttpKernel\Log\Logger;
 use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
+use Symfony\UX\StimulusBundle\StimulusBundle;
 
 final class Kernel extends BaseKernel
 {
@@ -37,6 +38,7 @@ final class Kernel extends BaseKernel
         yield new SonataBlockBundle();
         yield new SonataDoctrineORMAdminBundle();
         yield new PrestaMailReceiverBundle();
+        yield new StimulusBundle();
     }
 
     public function getProjectDir(): string
