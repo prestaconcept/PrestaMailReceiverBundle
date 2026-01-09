@@ -132,7 +132,7 @@ class Execution
             '%s / %s - %s',
             $this->email,
             $this->rule,
-            $this->date->format(DATE_ATOM),
+            $this->date !== null ? $this->date->format(DATE_ATOM) : '',
         );
     }
 
