@@ -73,24 +73,30 @@ final class Kernel extends BaseKernel
                 ],
             ],
         ]);
+
+        $ormConfig = [
+            'naming_strategy' => 'doctrine.orm.naming_strategy.underscore',
+            'mappings' => [
+                'PrestaMailReceiverBundle' => [
+                    'is_bundle' => false,
+                    'type' => 'attribute',
+                    'dir' => '%kernel.project_dir%/src/Entity',
+                    'prefix' => 'Presta\\MailReceiverBundle\\Entity',
+                    'alias' => 'PrestaMailReceiverBundle',
+                ],
+            ],
+        ];
+
+        if (\PHP_VERSION_ID < 80400) {
+            $ormConfig['auto_generate_proxy_classes'] = true;
+        }
+
         $container->extension('doctrine', [
             'dbal' => [
                 'url' => 'sqlite:///%kernel.project_dir%/var/database.sqlite',
                 'logging' => false,
             ],
-            'orm' => [
-                'auto_generate_proxy_classes' => true,
-                'naming_strategy' => 'doctrine.orm.naming_strategy.underscore',
-                'mappings' => [
-                    'PrestaMailReceiverBundle' => [
-                        'is_bundle' => false,
-                        'type' => 'attribute',
-                        'dir' => '%kernel.project_dir%/src/Entity',
-                        'prefix' => 'Presta\\MailReceiverBundle\\Entity',
-                        'alias' => 'PrestaMailReceiverBundle',
-                    ],
-                ],
-            ],
+            'orm' => $ormConfig,
         ]);
     }
 
