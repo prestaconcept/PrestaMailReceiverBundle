@@ -502,6 +502,10 @@
         <source>action_dispatch_email</source>
         <target>Reprocess</target>
       </trans-unit>
+      <trans-unit id="form.label_element">
+        <source>form.label_element</source>
+        <target>Element</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
