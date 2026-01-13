@@ -502,6 +502,10 @@
         <source>action_dispatch_email</source>
         <target>Relancer</target>
       </trans-unit>
+      <trans-unit id="form.label_element">
+        <source>form.label_element</source>
+        <target>Élément</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
