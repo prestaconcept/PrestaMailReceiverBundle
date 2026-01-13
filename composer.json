@@ -16,12 +16,9 @@
     "php-mime-mail-parser/php-mime-mail-parser": "7.0.0",
     "sonata-project/doctrine-orm-admin-bundle": "^4.13",
     "sonata-project/admin-bundle": "^4.15",
-    "symfony/console": "^6.3|^7.0",
     "symfony/form": "^6.3|^7.0",
     "symfony/framework-bundle": "^6.3|^7.0",
     "symfony/mailer": "^6.3|^7.0",
-    "symfony/property-info": "^6.3|^7.0",
-    "symfony/serializer": "^6.3|^7.0",
     "symfony/validator": "^6.3|^7.0",
     "symfony/yaml": "^6.3|^7.0"
   },
