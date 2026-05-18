@@ -26,13 +26,10 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 final class RuleAdmin extends AbstractAdmin
 {
     public function __construct(
-        string $code,
-        string $class,
-        string $baseControllerName,
         private ConditionRegistry $conditions,
         private ActionRegistry $actions,
     ) {
-        parent::__construct($code, $class, $baseControllerName);
+        parent::__construct();
     }
     /**
      * @inheritdoc

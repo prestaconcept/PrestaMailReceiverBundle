@@ -57,11 +57,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
             'label_translator_strategy' => 'sonata.admin.label.strategy.underscore',
         ])
         ->call('setTranslationDomain', ['PrestaMailReceiverBundle'])
-        ->args([
-            '$code' => 'presta_mail_receiver.admin.rule',
-            '$class' => Rule::class,
-            '$baseControllerName' => RuleController::class,
-        ])
 
         ->set(RuleConditionAdmin::class)
         ->tag('sonata.admin', [
